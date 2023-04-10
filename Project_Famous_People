@@ -1,0 +1,36 @@
+/* Create table about the people and what they do here */
+CREATE TABLE famous_people (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER);
+    
+INSERT INTO famous_people (fullname, age) VALUES ("Edward Norton", 53);
+INSERT INTO famous_people (fullname, age) VALUES ("Mark Normand", 39);
+INSERT INTO famous_people (fullname, age) VALUES ("Leonardo DiCaprio", 48);
+INSERT INTO famous_people (fullname, age) VALUES ("Banksy", 48);
+INSERT INTO famous_people (fullname, age) VALUES ("Ariana Grande", 29);
+
+CREATE TABLE professions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    job TEXT);
+
+INSERT INTO professions (person_id, job) VALUES (1, "actor");
+INSERT INTO professions (person_id, job) VALUES (3, "actor");
+INSERT INTO professions (person_id, job) VALUES (2, "comedian");
+INSERT INTO professions (person_id, job) VALUES (4, "artist");
+INSERT INTO professions (person_id, job) VALUES (5, "singer");
+
+CREATE TABLE magnum_opus (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    work TEXT);
+    
+INSERT INTO magnum_opus (person_id, work) VALUES (1, "Fight Club");
+INSERT INTO magnum_opus (person_id, work) VALUES (2, "Out to Lunch");
+INSERT INTO magnum_opus (person_id, work) VALUES (3, "The Revenant");
+INSERT INTO magnum_opus (person_id, work) VALUES (4, "Girl With Balloon");
+INSERT INTO magnum_opus (person_id, work) VALUES (5, "Into You");
+
+
+
