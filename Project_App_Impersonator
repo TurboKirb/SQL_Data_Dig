@@ -1,0 +1,35 @@
+/*Think about your favorite apps, and pick one that stores your data- like a game 
+that stores scores, an app that lets you post updates, etc. 
+Now in this project, you're going to imagine that the app stores your data 
+in a SQL database (which is pretty likely!), and write SQL statements 
+that might look like their own SQL.
+
+CREATE a table to store the data.
+INSERT a few example rows in the table.
+Use an UPDATE to emulate what happens when you edit data in the app.
+Use a DELETE to emulate what happens when you delete data in the app.*/
+
+/* What does the app's SQL look like? */
+
+CREATE TABLE garmin_connect(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    weekly_calories INTEGER,
+    intensity_min INTEGER,
+    v02_max INTEGER);
+    
+INSERT INTO garmin_connect(name, weekly_calories, intensity_min, v02_max) VALUES ("Paul Smith", 8957, 357, 48);
+INSERT INTO garmin_connect(name, weekly_calories, intensity_min, v02_max) VALUES ("Louis Celtz", 4879, 248, 41);
+INSERT INTO garmin_connect(name, weekly_calories, intensity_min, v02_max) VALUES ("Caleb Walker", 8422, 457, 51);
+INSERT INTO garmin_connect(name, weekly_calories, intensity_min, v02_max) VALUES ("Sadie Peters", 10788, 585, 55);
+INSERT INTO garmin_connect(name, weekly_calories, intensity_min, v02_max) VALUES ("Doxx Mee", 69696, 420, 48);
+
+SELECT * FROM garmin_connect;
+
+UPDATE garmin_connect set name="Kaleb Walker" 
+WHERE name = "Caleb Walker";
+
+DELETE FROM garmin_connect
+WHERE id = 5;
+
+SELECT * FROM garmin_connect;
